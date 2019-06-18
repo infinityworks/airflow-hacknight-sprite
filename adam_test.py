@@ -12,7 +12,7 @@ default_args = {
 	'retry_delay': timedelta(minutes=5),
 }
 
-dag = DAG('100%_my_work',
+dag = DAG('adammpie_test',
 			max_active_runs=3,
 			schedule_interval=timedelta(minutes=5),
 			default_args=default_args)
