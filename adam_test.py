@@ -3,7 +3,7 @@ from airflow.operators.bash_operator import BashOperator
 from datetime import datetime, timedelta
 
 default_args = {
-	'owner': 'viraj',
+	'owner': 'adampie',
 	'depends_on_past': False,
 	'start_date': datetime(2018, 1, 1),
 	'email_on_failure': False,
@@ -12,7 +12,7 @@ default_args = {
 	'retry_delay': timedelta(minutes=5),
 }
 
-dag = DAG('example_dag_two',
+dag = DAG('100%_my_work',
 			max_active_runs=3,
 			schedule_interval=timedelta(minutes=5),
 			default_args=default_args)
